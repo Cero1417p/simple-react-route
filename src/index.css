@@ -49,9 +49,12 @@ ul.navbar li a {
 li.dropdown {
   display: inline-block;
 }
-ul.navbar li a:hover, .dropdown:hover .dropbtn {
+ul.navbar li a:hover, .dropdown:hover .dropbtn{
   background-color: #6089e5;
 }
+
+
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -85,4 +88,9 @@ li a.active{
 ul.sidebar li a:hover:not(.active){
   background-color: #555;
   color: white;
+}
+
+
+:target{
+  background-color:red;
 }

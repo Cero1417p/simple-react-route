@@ -1,31 +1,24 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
-import {User} from "./components/user";
 import {Layout} from "./components/LayOut";
+import { SubRouter } from './components/SubRouter';
+import { NotFound } from './components/NotFound';
 
-const Home = () => {
-    return (
-        <h1>Home</h1>
-    );
-}
 
 function Account() {
     return (
         <>
             <h1>Account</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cum eligendi eum illo ipsum libero maiores minima, molestiae nam omnis pariatur praesentium quibusdam ut velit voluptatem. Ad mollitia quae quia.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, cum eligendi eum illo ipsum libero maiores minima, 
+                molestiae nam omnis pariatur praesentium quibusdam ut velit voluptatem. Ad mollitia quae quia.</p>
         </>
     );
 }
 
-function NoMatch() {
-    return (
-        <h1>No route abialable</h1>
-    );
-}
+
 
 function Profile() {
-    return (
+    return ( 
         <>
             <h1>Profile</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid dolor doloremque earum harum illo,
@@ -35,27 +28,17 @@ function Profile() {
     );
 }
 
-let activeStyle = {
-    backgroundColor: "#04AA6D",
-    color: "white"
-};
-
 
 function App() {
     return (
         <>
             <Routes>
-
                 <Route element={<Layout />}>
-                    <Route index element={<Home/>}/>
-                    <Route path="home" element={<Home/>}/>
-                    <Route path="user" element={<User/>}>
-                        <Route path="profile" element={<Profile/>}/>
-                        <Route path="account" element={<Account/>}/>
-                        <Route path="list1" element={<h1>List 1</h1>}/>
-                        <Route path="list2" element={<h1>List 2</h1>}/>
-                    </Route>
-                    <Route path="*" element={<NoMatch/>}/>
+                    <Route index element={<h1>INDEX</h1>}/>
+                    <Route path="home" element={<h1>Home</h1>}/>
+                    <Route path="user/*" element={<SubRouter/>} />
+        
+                    <Route path="*" element={<NotFound/>}/>
                 </Route>
 
             </Routes>

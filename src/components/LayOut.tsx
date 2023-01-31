@@ -1,4 +1,5 @@
-import {NavLinkSide} from "./navLink";
+import React from "react";
+import {NavLinkSidebar} from "./NavLink";
 import {Outlet} from "react-router-dom";
 
 export function Layout() {
@@ -9,10 +10,10 @@ export function Layout() {
                     <h3 style={{padding:"8px 16px"}}>Menu</h3>
                 </li>
                 <li>
-                    <NavLinkSide to="home">Home</NavLinkSide>
+                    <NavLinkSidebar to="home">Home</NavLinkSidebar>
                 </li>
                 <li >
-                    <NavLinkSide to="user">User</NavLinkSide>
+                    <NavLinkSidebar to="user">User</NavLinkSidebar>
                 </li>
             </ul>
             <div style={{marginLeft:"25%",padding:"1px 16px",height:"1000px"}}>
