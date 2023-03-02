@@ -1,11 +1,12 @@
 import { NavLinkSidebar } from "./NavLink"
-import { Outlet } from "react-router-dom"
+import {NavLink, Outlet} from "react-router-dom"
 export function Layout() {
     return (
         <>
             <ul className="sidebar">
                 <li>
-                    <h3 style={{ padding: "8px 16px" }}>Menu</h3>
+                    <h3 style={{ padding: "8px 16px" }}>Index</h3>
+                    <NavLink style={{fontWeight:"bolder",fontSize:"1.2rem"}} to={"/"}>Inicio</NavLink>
                 </li>
                 <li>
                     <NavLinkSidebar to="home">Home</NavLinkSidebar>
