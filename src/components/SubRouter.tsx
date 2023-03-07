@@ -3,14 +3,9 @@ import { NotFound } from "../pages/NotFound"
 import { User } from "./User"
 import {lazy, Suspense, useEffect} from "react";
 
-const Time = lazy(() => new Promise(resolve =>
-    setTimeout(() => resolve(import("./../pages/Time")), 2000)
-))
+import Time from './../pages/Time';
 
 export const SubRouter = () => {
-
-
-
     return (
         <>
             <User />
