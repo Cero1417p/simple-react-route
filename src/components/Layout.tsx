@@ -5,8 +5,7 @@ export function Layout() {
         <>
             <ul className="sidebar">
                 <li>
-                    <h3 style={{ padding: "8px 16px" }}>Index</h3>
-                    <NavLink style={{fontWeight:"bolder",fontSize:"1.2rem"}} to={"/"}>Inicio</NavLink>
+                    <NavLink className="none" style={{backgroundColor:"transparent",color:"black",fontWeight:"bolder",fontSize:"1.2rem",margin:"1rem 0rem"}} to={"/"}>Inicio</NavLink>
                 </li>
                 <li>
                     <NavLinkSidebar to="home">Home</NavLinkSidebar>

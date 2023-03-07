@@ -4,7 +4,7 @@ import { User } from "./User"
 import {lazy, Suspense, useEffect} from "react";
 
 const Time = lazy(() => new Promise(resolve =>
-    setTimeout(() => resolve(import("../pages/Time")), 5000)
+    setTimeout(() => resolve(import("./../pages/Time")), 2000)
 ))
 
 export const SubRouter = () => {
